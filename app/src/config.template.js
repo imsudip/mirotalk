@@ -1,86 +1,62 @@
 'use strict';
-
 const packageJson = require('../../package.json');
-
 module.exports = {
-    // Branding and customizations require a license: https://codecanyon.net/item/mirotalk-p2p-webrtc-realtime-video-conferences/38376661
     brand: {
         htmlInjection: true,
         app: {
-            language: 'en', // https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
-            name: 'MiroTalk',
-            title: '<h1>MiroTalk</h1>Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
+            language: 'en',
+            name: 'WinkWink',
+            title: '<h1>😉 WinkWink</h1>Private video calls just for us.<br />Sweet, Simple, Secure.',
             description:
-                'Start your next video call with a single click. No download, plug-in, or login is required. Just get straight to talking, messaging, and sharing your screen.',
-            joinDescription: 'Pick a room name.<br />How about this one?',
-            joinButtonLabel: 'JOIN ROOM',
-            joinLastLabel: 'Your recent room:',
+                'One click and boom—we’re face to face. No downloads, no logins, just you and me sharing smiles, chats, and screens.',
+            joinDescription: 'Pick a cute room name.<br />I’ll be waiting 💕',
+            joinButtonLabel: 'JOIN OUR CALL',
+            joinLastLabel: 'Last time we were here:',
         },
         og: {
             type: 'app-webrtc',
-            siteName: 'MiroTalk',
-            title: 'Click the link to make a call.',
+            siteName: 'WinkWink',
+            title: 'Hey… join me on WinkWink 😉',
             description:
-                'MiroTalk calling provides real-time HD quality and latency simply not available with traditional technology.',
-            image: 'https://p2p.mirotalk.com/images/preview.png',
-            url: 'https://p2p.mirotalk.com',
+                'Our cozy little place for real-time video calls, laughs, and late-night rants.',
+            image: '/images/winkwink-preview.png',
+            url: 'https://winkwink.local',
         },
         site: {
-            shortcutIcon: '../images/logo.svg',
-            appleTouchIcon: '../images/logo.svg',
-            landingTitle: 'MiroTalk a Free Secure Video Calls, Chat & Screen Sharing.',
-            newCallTitle: 'MiroTalk a Free Secure Video Calls, Chat & Screen Sharing.',
-            newCallRoomTitle: 'Pick name. <br />Share URL. <br />Start conference.',
+            shortcutIcon: '../images/winkwink-logo.svg',
+            appleTouchIcon: '../images/winkwink-logo.svg',
+            landingTitle: 'WinkWink • Just us, in HD 💖',
+            newCallTitle: 'Start a WinkWink moment 💕',
+            newCallRoomTitle: 'Pick a room name. <br />Share link. <br />Hop in.',
             newCallRoomDescription:
-                "Each room has its disposable URL. Just pick a room name and share your custom URL. It's that easy.",
-            loginTitle: 'MiroTalk - Host Protected login required.',
-            clientTitle: 'MiroTalk WebRTC Video call, Chat Room & Screen Sharing.',
-            privacyPolicyTitle: 'MiroTalk - privacy and policy.',
-            stunTurnTitle: 'Test Stun/Turn Servers.',
-            notFoundTitle: 'MiroTalk - 404 Page not found.',
+                "Every room has its own private link. Pick a name, share it, and let the magic happen.",
+            loginTitle: 'WinkWink - Private login required.',
+            clientTitle: 'WinkWink Video Call & Chat Room',
+            privacyPolicyTitle: 'WinkWink - Privacy Promise',
+            stunTurnTitle: 'Connection Test',
+            notFoundTitle: 'WinkWink - Lost? This page is empty 💀',
         },
         html: {
-            topSponsors: true,
-            features: true,
-            browsers: true,
-            teams: true, // please keep me always true ;)
-            tryEasier: true,
-            poweredBy: true,
-            sponsors: true,
-            advertisers: true,
+            topSponsors: false,
+            features: false,
+            browsers: false,
+            teams: false,
+            tryEasier: false,
+            poweredBy: false,
+            sponsors: false,
+            advertisers: false,
             footer: true,
         },
         about: {
-            imageUrl: '../images/mirotalk-logo.gif',
-            title: `WebRTC P2P v${packageJson.version}`,
+            imageUrl: '../images/winkwink-logo.gif',
+            title: `WinkWink P2P v${packageJson.version}`,
             html: `
-                <button 
-                    id="support-button" 
-                    data-umami-event="Support button" 
-                    onclick="window.open('https://codecanyon.net/user/miroslavpejic85')">
-                    <i class="fas fa-heart" ></i>&nbsp;Support
-                </button>
-                <br /><br /><br />
-                Author:<a 
-                    id="linkedin-button" 
-                    data-umami-event="Linkedin button" 
-                    href="https://www.linkedin.com/in/miroslav-pejic-976a07101/" target="_blank"> 
-                    Miroslav Pejic
-                </a>
-                <br />
-                Email:<a 
-                    id="email-button" 
-                    data-umami-event="Email button" 
-                    href="mailto:miroslav.pejic.85@gmail.com?subject=MiroTalk P2P info"> 
-                    miroslav.pejic.85@gmail.com
-                </a>
-                <br /><br />
+                <span>Made with ❤️ just for us</span>
                 <hr />
-                <span>&copy; 2025 MiroTalk P2P, all rights reserved</span>
+                <span>&copy; 2025 WinkWink, ours forever</span>
                 <hr />
             `,
         },
-        // https://docs.mirotalk.com/mirotalk-p2p/integration/#widgets-integration
         widget: {
             enabled: false,
             roomId: 'support-room',
@@ -89,111 +65,58 @@ module.exports = {
             widgetType: 'support',
             supportWidget: {
                 position: 'top-right',
-                expertImages: [
-                    'https://photo.cloudron.pocketsolution.net/uploads/original/95/7d/a5f7f7a2c89a5fee7affda5f013c.jpeg',
-                ],
-                buttons: {
-                    audio: true,
-                    video: true,
-                    screen: true,
-                    chat: true,
-                    join: true,
-                },
+                expertImages: [],
+                buttons: {},
                 checkOnlineStatus: false,
-                isOnline: true,
-                customMessages: {
-                    heading: 'Need Help?',
-                    subheading: 'Get instant support from our expert team!',
-                    connectText: 'connect in < 5 seconds',
-                    onlineText: 'We are online',
-                    offlineText: 'We are offline',
-                    poweredBy: 'Powered by MiroTalk',
-                },
+                isOnline: false,
+                customMessages: {},
             },
         },
-        //...
     },
-    /**
-     * Configuration for controlling the visibility of buttons in the MiroTalk P2P client.
-     * Set properties to true to show the corresponding buttons, or false to hide them.
-     * captionBtn, showSwapCameraBtn, showScreenShareBtn, showFullScreenBtn, showVideoPipBtn, showDocumentPipBtn -> (auto-detected).
-     */
     buttons: {
         main: {
             showShareQr: true,
-            showShareRoomBtn: true, // For guests
-            showHideMeBtn: true,
+            showShareRoomBtn: true,
             showFullScreenBtn: true,
             showAudioBtn: true,
             showVideoBtn: true,
-            showScreenBtn: true, // autodetected
+            showScreenBtn: true,
             showRecordStreamBtn: true,
             showChatRoomBtn: true,
-            showCaptionRoomBtn: true,
             showRoomEmojiPickerBtn: true,
-            showMyHandBtn: true,
-            showWhiteboardBtn: true,
             showSnapshotRoomBtn: true,
             showFileShareBtn: true,
-            showDocumentPipBtn: true,
             showMySettingsBtn: true,
-            showAboutBtn: true, // Please keep me always true, Thank you!
-            showExtraBtn: true,
+            showAboutBtn: true,
         },
         chat: {
             showTogglePinBtn: true,
             showMaxBtn: true,
             showSaveMessageBtn: true,
             showMarkDownBtn: true,
-            showChatGPTBtn: true,
             showFileShareBtn: true,
             showShareVideoAudioBtn: true,
             showParticipantsBtn: true,
-        },
-        caption: {
-            showTogglePinBtn: true,
-            showMaxBtn: true,
-        },
-        settings: {
-            showMicOptionsBtn: true,
-            showTabRoomPeerName: true,
-            showTabRoomParticipants: true,
-            showTabRoomSecurity: true,
-            showTabEmailInvitation: true,
-            showCaptionEveryoneBtn: true,
-            showMuteEveryoneBtn: true,
-            showHideEveryoneBtn: true,
-            showEjectEveryoneBtn: true,
-            showLockRoomBtn: true,
-            showUnlockRoomBtn: true,
-            showShortcutsBtn: true,
         },
         remote: {
             showAudioVolume: true,
             audioBtnClickAllowed: true,
             videoBtnClickAllowed: true,
             showVideoPipBtn: true,
-            showKickOutBtn: true,
             showSnapShotBtn: true,
             showFileShareBtn: true,
             showShareVideoAudioBtn: true,
-            showGeoLocationBtn: true,
             showPrivateMessageBtn: true,
-            showZoomInOutBtn: false,
             showVideoFocusBtn: true,
         },
         local: {
             showVideoPipBtn: true,
             showSnapShotBtn: true,
             showVideoCircleBtn: true,
-            showZoomInOutBtn: false,
-        },
-        whiteboard: {
-            whiteboardLockBtn: false,
         },
     },
     webhook: {
-        enabled: false, // Enable webhook functionality
-        url: 'http://localhost:8888/webhook-endpoint', // Webhook server URL
+        enabled: false,
+        url: 'http://localhost:8888/webhook-endpoint',
     },
 };
